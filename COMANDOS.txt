@@ -11,3 +11,33 @@ git commit -m "//COMENTARIO"
 git push origin
 
 ---------------------------------------------
+
+
+
+Linda Quelex@LAPTOP-SLPRK56J MINGW64 ~/Desktop/UNIVERSIDAD 2022/LAB IPC2/PROYECTO 1 VERSIONES GIT/IPC2_Proyecto1_201403745 (master)
+$ git init
+Reinitialized existing Git repository in C:/Users/Linda Quelex/Desktop/UNIVERSIDAD 2022/LAB IPC2/PROYECTO 1 VERSIONES GIT/IPC2_Proyecto1_201403745/.git/
+
+Linda Quelex@LAPTOP-SLPRK56J MINGW64 ~/Desktop/UNIVERSIDAD 2022/LAB IPC2/PROYECTO 1 VERSIONES GIT/IPC2_Proyecto1_201403745 (master)
+$ git add .
+
+Linda Quelex@LAPTOP-SLPRK56J MINGW64 ~/Desktop/UNIVERSIDAD 2022/LAB IPC2/PROYECTO 1 VERSIONES GIT/IPC2_Proyecto1_201403745 (master)
+$ git commit -m "comandos"
+[master 0309d4a] comandos
+ 1 file changed, 13 insertions(+)
+ create mode 100644 COMANDOS.txt
+
+Linda Quelex@LAPTOP-SLPRK56J MINGW64 ~/Desktop/UNIVERSIDAD 2022/LAB IPC2/PROYECTO 1 VERSIONES GIT/IPC2_Proyecto1_201403745 (master)
+$ git push -u origin master
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 495 bytes | 495.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/LindaQuelex/IPC2_Proyecto1_201403745.git
+   715047e..0309d4a  master -> master
+branch 'master' set up to track 'origin/master'.
+
+Linda Quelex@LAPTOP-SLPRK56J MINGW64 ~/Desktop/UNIVERSIDAD 2022/LAB IPC2/PROYECTO 1 VERSIONES GIT/IPC2_Proyecto1_201403745 (master)
+$
