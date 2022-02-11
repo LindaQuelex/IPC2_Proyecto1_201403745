@@ -41,3 +41,6 @@ branch 'master' set up to track 'origin/master'.
 
 Linda Quelex@LAPTOP-SLPRK56J MINGW64 ~/Desktop/UNIVERSIDAD 2022/LAB IPC2/PROYECTO 1 VERSIONES GIT/IPC2_Proyecto1_201403745 (master)
 $
+
+--------------------------------------------------------------------------
+
