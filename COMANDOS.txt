@@ -1,0 +1,13 @@
+AGREGAR A GITHUB
+
+git remote add origin ^[[200~https://github.com/LindaQuelex/IPC2_Proyecto1_201403745.git~
+git commit -m
+
+----------------------------------------------
+ACTUALIZACIONES A GITHUB (REMOTO)
+
+git add .
+git commit -m "//COMENTARIO"
+git push origin
+
+---------------------------------------------
