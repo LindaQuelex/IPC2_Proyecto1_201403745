@@ -28,6 +28,11 @@ $ git commit -m "comandos"
  create mode 100644 COMANDOS.txt
 
 Linda Quelex@LAPTOP-SLPRK56J MINGW64 ~/Desktop/UNIVERSIDAD 2022/LAB IPC2/PROYECTO 1 VERSIONES GIT/IPC2_Proyecto1_201403745 (master)
+
+
+
+
+
 $ git push -u origin master
 Enumerating objects: 4, done.
 Counting objects: 100% (4/4), done.
@@ -47,7 +52,7 @@ $
 
 
 
-
+OPCIÓN 1: 
 import Tkinter, tkFileDialog, re
     root = Tkinter.Tk() #esto se hace solo para eliminar la ventanita de Tkinter 
     root.withdraw() #ahora se cierra 
@@ -59,3 +64,17 @@ import Tkinter, tkFileDialog, re
 
     save_path = file_path[0: file_position+1] #extracts the saving path.
 
+--------------------------------------------------------------------------------------------------
+
+
+
+OPCIÓN 2:
+from Tkinter import Tk
+from tkinter.filedialog import askopenfilename
+
+Tk().withdraw() # we don't want a full GUI, so keep the root window from appearing
+filename = askopenfilename() # show an "Open" dialog box and return the path to the selected file
+print(filename)
+
+
+----------------------------------------------------------------------------------------------------
