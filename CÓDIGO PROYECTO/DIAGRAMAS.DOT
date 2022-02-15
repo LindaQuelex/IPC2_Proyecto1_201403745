@@ -23,14 +23,14 @@
         Fila6 -> Fila7;
         Fila7 -> Fila8;
 
-        Columna1[label="1", group =1];
-        Columna2[label="2", group =2];
-        Columna3[label="3", group =3];
-        Columna4[label="4", group =4];
-        Columna5[label="5", group =5];
-        Columna6[label="6", group =6];
-        Columna7[label="7", group =7];
-        Columna8[label="8", group =8];
+        Columna1[label="1", group =1, fillcolor=white];
+        Columna2[label="2", group =2, fillcolor=white];
+        Columna3[label="3", group =3, fillcolor=white];
+        Columna4[label="4", group =4, fillcolor=white];
+        Columna5[label="5", group =5, fillcolor=white];
+        Columna6[label="6", group =6, fillcolor=white];
+        Columna7[label="7", group =7, fillcolor=white];
+        Columna8[label="8", group =8, fillcolor=white];
 
         Columna1 -> Columna2;
         Columna2 -> Columna3;
