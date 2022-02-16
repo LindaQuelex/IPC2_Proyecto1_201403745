@@ -17,3 +17,12 @@ print('\nLos datos son: ')
 for elem in piso:
     print(elem.firstChild.data)
 
+
+class NodoPiso():
+    def __init__(self, codigopiso, color, precioflip, precioslide, siguiente, anterior) :
+        self.codigopiso= codigopiso
+        self.color=color
+        self.precioflip= precioflip
+        self.precioslide= precioslide
+        self.anterior=None
+        self.siguiente=None
