@@ -3,8 +3,43 @@ from nodocelda import NodoCelda
 class ListaCelda():
     def __init__(self):
         self.iniciarnodocelda = None
+        self.anterior=None
+        self.siguiente= None
 
-    def insertar_en_lista_vacia(self, r,c,color):
+    def inserta_al_final_celda(self, r,c, color):
+        nuevacelda=NodoCelda(r,c, color)
+        self.size += 1 
+        if self.primero is None:
+            self.primero=nuevacelda
+            self.ultimo=nuevacelda
+        else:
+           self.ultimo.setsiguiente(nuevacelda)
+           self.ultimo=nuevacelda
+
+    def mostrar_pisos(self):
+        tmp=self.primero
+        for i in range(self.size):
+            print(i,'*La posición en x de la celda es:', tmp.getcolumnacelda(),'\n','*La posición en y de la celda es:',tmp.getfilacelda(),'\n','*El color de la celda es:',tmp.getcolorcelda(),'\n')
+            tmp = tmp.getsiguiente()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    '''def insertar_en_lista_vacia(self, r,c,color):
         if self.iniciarnodocelda is None:
             nuevonodo = NodoCelda(r,c,color)
             self.iniciarnodocelda = nuevonodo
@@ -151,11 +186,11 @@ class ListaCelda():
             q.siguiente = p
             p = q
             q = q.anterior
-        self.iniciarnodocelda = p
+        self.iniciarnodocelda = p'''
 
 
 #PRUEBA DE FUNCIONES DE LA LISTA DOBLEMENTE ENLAZADA
 
-nuevalistacelda = ListaCelda()
-nuevalistacelda.insertar_en_lista_vacia(2,3,"W")
-nuevalistacelda.recorrer_lista()
+# nuevalistacelda = ListaCelda()
+# nuevalistacelda.insertar_en_lista_vacia(2,3,"W")
+# nuevalistacelda.recorrer_lista()
