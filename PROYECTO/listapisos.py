@@ -15,6 +15,7 @@ class ListaPisos():
         else:
            self.ultimo.setsiguiente(nuevopiso)
            self.ultimo=nuevopiso
+        return nuevopiso
 
     def mostrar_pisos(self):
         tmp=self.primero

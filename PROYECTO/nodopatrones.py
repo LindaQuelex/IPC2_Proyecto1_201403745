@@ -1,11 +1,11 @@
 from listacelda import ListaCelda
 
 class NodoPatrones():
-    def __init__(self, codigopatrones, cadenapatrones):
+    def __init__(self, codigopatrones):
         self.codigopatrones= codigopatrones
         self.anterior=None
         self.siguiente=None
-        self.celdas=ListaCelda()
+        self.listaceldas=ListaCelda()
 
 
     def getcodigopatrones(self):
@@ -26,5 +26,10 @@ class NodoPatrones():
     def setanterior(self, nuevopatron):
         self.anterior = nuevopatron
    
+    def getlistacelda(self):
+        return self.listaceldas
+
+    def setlistaceldas(self, nuevacelda):
+        self.listaceldas = nuevacelda
         
 

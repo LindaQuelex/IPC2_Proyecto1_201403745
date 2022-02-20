@@ -9,7 +9,7 @@ class NodoPiso():
         self.precioflip= F
         self.precioslide= S
         self.siguiente=None
-        self.patrones= ListaPatrones()
+        self.patrones= ListaPatrones('codigopatrones')
         self.celda= ListaCelda()
     
     def getnombrepiso(self):
@@ -49,8 +49,19 @@ class NodoPiso():
     def setsiguiente(self, nuevopiso):
         self.siguiente = nuevopiso
    
+ 
+    def getListapatrones(self):
+        return self.getListapatrones()
+
+    def setlistapatrones(self, nuevalistapatrones):
+        self.patrones = nuevalistapatrones
 
 
+    def getListaceldas(self):
+        return self.getListaceldas()
+
+    def setlistaceldas(self, nuevalistaceldas):
+        self.celdas= nuevalistaceldas
     
     # def inicializarceldas(self):
     #     #self.nombrespiso1.crearpatrones(Lecturaxml)

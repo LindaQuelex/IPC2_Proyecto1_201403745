@@ -3,8 +3,8 @@ from nodocelda import NodoCelda
 class ListaCelda():
     def __init__(self):
         self.iniciarnodocelda = None
-        self.anterior=None
-        self.siguiente= None
+        self.primero : NodoCelda=None
+        self.ultimo= None
 
     def inserta_al_final_celda(self, r,c, color):
         nuevacelda=NodoCelda(r,c, color)
@@ -15,6 +15,7 @@ class ListaCelda():
         else:
            self.ultimo.setsiguiente(nuevacelda)
            self.ultimo=nuevacelda
+        return nuevacelda
 
     def mostrar_pisos(self):
         tmp=self.primero

@@ -17,9 +17,11 @@ class ListaPatrones():
         else:
            self.ultimo.setsiguiente(nuevopatron)
            self.ultimo=nuevopatron
+        return nuevopatron
 
     def mostrar_patrones(self):
         tmp=self.primero
         for i in range(self.size):
             print(i,'El codigo del patron es:', tmp.getcodigopatrones())
             tmp = tmp.getsiguiente()
+        
