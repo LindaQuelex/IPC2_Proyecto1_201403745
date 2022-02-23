@@ -26,8 +26,33 @@ def elementTree(ruta):
                                     
 elementTree('./ARCHIVOS ENTRADA/piso.xml')
 
+'''def main():
+    user_response = input('Write a word: ')
+    # Si deseas recorrer la palabra puedes hacer esto
+    for char in user_response: # los strings son iterables
+        print(char)
+    """Output
+    Write a word: hello world
+    h
+    e
+    l
+    l
+    o
 
+    w
+    o
+    r
+    l
+    d"""
+    # Si lo que deseas es simplemente obtener el arreglo para procesarlo o lo que sea puedes hacer lo siguiente:
+    word_chars = list(user_response)
+    print(word_chars)
+    """Output
+    Write a word: hi
+    ['h', 'i']
 
+if __name__ == '__main__':
+    main()'''
 
 '''PRUEBA CON MINIDOM
 class Lecturaxml():
