@@ -1,3 +1,4 @@
+from nodopatrones import NodoPatrones
 from nodopiso import NodoPiso
 
 class ListaPisos():
@@ -15,6 +16,7 @@ class ListaPisos():
         else:
            self.ultimo.setsiguiente(nuevopiso)
            self.ultimo=nuevopiso
+        nuevopiso.patrones.inserta_al_final_patrones
         return nuevopiso
 
     def mostrar_pisos(self):

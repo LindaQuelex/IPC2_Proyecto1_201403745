@@ -2,6 +2,7 @@ from listacelda import ListaCelda
 
 class NodoPatrones():
     def __init__(self, codigopatrones):
+        
         self.codigopatrones= codigopatrones
         self.anterior=None
         self.siguiente=None

@@ -9,7 +9,7 @@ class NodoPiso():
         self.precioflip= F
         self.precioslide= S
         self.siguiente=None
-        self.patrones= ListaPatrones('codigopatrones')
+        self.patrones= ListaPatrones()
         self.celda= ListaCelda()
     
     def getnombrepiso(self):

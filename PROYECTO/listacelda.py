@@ -1,3 +1,4 @@
+
 from nodocelda import NodoCelda
 
 class ListaCelda():
@@ -5,9 +6,10 @@ class ListaCelda():
         self.iniciarnodocelda = None
         self.primero : NodoCelda=None
         self.ultimo= None
+        self.size=0
 
-    def inserta_al_final_celda(self, r,c, color):
-        nuevacelda=NodoCelda(r,c, color)
+    def inserta_al_final_celda(self, color):
+        nuevacelda=NodoCelda(color)
         self.size += 1 
         if self.primero is None:
             self.primero=nuevacelda
@@ -16,15 +18,17 @@ class ListaCelda():
            self.ultimo.setsiguiente(nuevacelda)
            self.ultimo=nuevacelda
         return nuevacelda
+    
+    
 
-    def mostrar_pisos(self):
+    def mostrar_celda(self):
         tmp=self.primero
         for i in range(self.size):
-            print(i,'*La posición en x de la celda es:', tmp.getcolumnacelda(),'\n','*La posición en y de la celda es:',tmp.getfilacelda(),'\n','*El color de la celda es:',tmp.getcolorcelda(),'\n')
+            print('*El color de la celda es:',tmp.getcolorcelda())
             tmp = tmp.getsiguiente()
 
 
-
+  
 
 
 

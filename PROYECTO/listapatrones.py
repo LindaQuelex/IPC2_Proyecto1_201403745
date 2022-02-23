@@ -1,8 +1,8 @@
 from nodopatrones import NodoPatrones
 
 class ListaPatrones():
-    def __init__(self, codigopatrones):
-        self.codigopatrones = codigopatrones
+    def __init__(self):
+    
         self.primero: NodoPatrones= None
         self.ultimo=None
         self.size = 0
@@ -17,11 +17,13 @@ class ListaPatrones():
         else:
            self.ultimo.setsiguiente(nuevopatron)
            self.ultimo=nuevopatron
+           nuevopatron.nuevacelda
+        nuevopatron.listaceldas.inserta_al_final_celda
         return nuevopatron
 
     def mostrar_patrones(self):
         tmp=self.primero
         for i in range(self.size):
-            print(i,'El codigo del patron es:', tmp.getcodigopatrones())
+            print(i,'Las celdas del patron son:', tmp.listaceldas())
             tmp = tmp.getsiguiente()
         

@@ -1,23 +1,29 @@
 class NodoCelda():
-    def __init__(self, r,c, color ):
-        self.filacelda = r
-        self.columnacelda = c
+    def __init__(self, color ):
+       
+        # self.filacelda = r
+        # self.columnacelda = c
         self.colorcelda =color
         self.siguiente = None
         self.anterior = None    
 
+    # def getcodigopatron(self):
+    #     return self.codigopatron
 
-    def getfilacelda(self):
-        return self.filacelda
+    # def setcodigopatron(self, codigopatron):
+    #     self.codigopatron = codigopatron
 
-    def setfilacelda(self, filacelda):
-        self.filacelda = filacelda
+    # def getfilacelda(self):
+    #     return self.filacelda
 
-    def getcolumnacelda(self):
-        return self.columnacelda
+    # def setfilacelda(self, filacelda):
+    #     self.filacelda = filacelda
 
-    def setcolumnacelda(self, columnacelda):
-        self.columnacelda = columnacelda
+    # def getcolumnacelda(self):
+    #     return self.columnacelda
+
+    # def setcolumnacelda(self, columnacelda):
+    #     self.columnacelda = columnacelda
 
     def getcolorcelda(self):
         return self.colorcelda
