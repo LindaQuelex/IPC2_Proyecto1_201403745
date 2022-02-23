@@ -3,7 +3,6 @@ from listacelda import ListaCelda
 from listapatrones import ListaPatrones
 from listapisos import ListaPisos
 
-
 Crearlistapisos = ListaPisos()
 Crearlistacodpatron =ListaPatrones()
 Crearlistaceldas =ListaCelda()
@@ -14,17 +13,34 @@ def elementTree(ruta):
     print (raiz , "posición en memoria de la etiqueta raíz")
     for piso in raiz:
         print(piso.attrib['nombre'])
-        for variable in piso:
-            var2=variable.text
-            etiqueta2=variable.tag
-            print (etiqueta2, var2)
-            if variable.tag=="patrones":
-                for patron in variable:
-                    etiqueta3=patron.tag
-                    var3=patron.text
-                    print (patron.attrib, var3) 
-                                    
+        print("R=fila, C=columna, F=costo de voltear, S=costo de deslizar")
+        for datospiso in piso:
+            dptag=datospiso.tag
+            dp=datospiso.text
+            print (dptag, dp)
+            if datospiso.tag=="patrones":
+                for patron in datospiso:
+                    patrontag=patron.tag
+                    codigopatron=patron.attrib
+                    cadenapatron=patron.text
+                    print (patrontag, codigopatron, cadenapatron)
+                      
+
+    def Dividir_CadenaPatron():
+        def __init__ (self, cadena):
+            self.cadena= cadenapatron
+            for i in cadena:
+             divcad= cadenapatron
+             print(divcad)
+
+
+            
+
+    Dividir_CadenaPatron()
+
 elementTree('./ARCHIVOS ENTRADA/piso.xml')
+
+
 
 
 
@@ -43,8 +59,6 @@ class Lecturaxml():
     print('\nLos datos son: ')
     for elem in nombrepisoxml:
         print(elem.firstChild.data)'''
-
-
 
 '''crearpisos=Crearlistapisos.inserta_al_final(piso.attrib['nombre'], R.text , C.text, F.text, S.text)         
         patrones = piso[4]
