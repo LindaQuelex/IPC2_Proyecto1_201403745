@@ -1,3 +1,4 @@
+
 import xml.etree.ElementTree as ET
 from listacelda import ListaCelda
 from listapatrones import ListaPatrones
@@ -12,9 +13,11 @@ def elementTree(ruta):
     raiz= tree.getroot()
     print (raiz , "posición en memoria de la etiqueta raíz")
     for piso in raiz:
-        print(piso.attrib['nombre'])
+        nombrepiso=(piso.attrib['nombre'])
+        print(nombrepiso)
         print("R=fila, C=columna, F=costo de voltear, S=costo de deslizar")
         for datospiso in piso:
+            if datospiso.tag =="R":
             dptag=datospiso.tag
             dp=datospiso.text
             print (dptag, dp)
@@ -24,49 +27,22 @@ def elementTree(ruta):
                     codigopatron=patron.attrib
                     cadenapatron=patron.text
                     print (patrontag, codigopatron, cadenapatron)
-                      
+                    colorcelda=cadenapatron
+                    for caracter in colorcelda:
+                        print(caracter)
+            listapisos=Crearlistapisos.inserta_al_final(nombrepiso,dp, None,None,None) 
+            Crearlistapisos.mostrar_pisos() 
 
-    def Dividir_CadenaPatron():
-        def __init__ (self, cadena):
-            self.cadena= cadenapatron
-            for i in cadena:
-             divcad= cadenapatron
-             print(divcad)
+        # print("aqui empieza la implementación de listas")
+        # listapisos=Crearlistapisos.inserta_al_final(nombrepiso,None,None, None,None)   
+        # listapisos.patrones.inserta_al_final_patrones(codigopatron) 
+        # Crearlistapisos.mostrar_pisos()
+        # listapisos.patrones.mostrar_patrones()
+              
 
-
-            
-
-    Dividir_CadenaPatron()
 
 elementTree('./ARCHIVOS ENTRADA/piso.xml')
 
-'''def main():
-    user_response = input('Write a word: ')
-    # Si deseas recorrer la palabra puedes hacer esto
-    for char in user_response: # los strings son iterables
-        print(char)
-    """Output
-    Write a word: hello world
-    h
-    e
-    l
-    l
-    o
-
-    w
-    o
-    r
-    l
-    d"""
-    # Si lo que deseas es simplemente obtener el arreglo para procesarlo o lo que sea puedes hacer lo siguiente:
-    word_chars = list(user_response)
-    print(word_chars)
-    """Output
-    Write a word: hi
-    ['h', 'i']
-
-if __name__ == '__main__':
-    main()'''
 
 
 

@@ -1,5 +1,8 @@
 
 from nodocelda import NodoCelda
+import os
+import webbrowser
+
 
 class ListaCelda():
     def __init__(self):
@@ -19,7 +22,33 @@ class ListaCelda():
            self.ultimo=nuevacelda
         return nuevacelda
     
+
+    def grafica(self):
+        auxNodo = self.primero
+        strGrafica=" digraph G { \n"
+        ##----------while para crear nodos
+        while auxNodo is not None:
+            strGrafica += '{}[label="{}",color = "green",arrowhead = "diamond",fillcolor="red",style="filled",shape="box"];\n'.format(auxNodo.colorcelda,auxNodo.colorcelda)
+
+            auxNodo=auxNodo.siguiente
+        ##----------while para Unir nodos
+        auxNodo=self.primero
+        while auxNodo is not None:
+            if auxNodo.siguiente is None:
+                None
+            else: 
+                strGrafica += '{}->{};\n'.format(auxNodo.colorcelda,auxNodo.siguiente.colorcelda)
+            auxNodo=auxNodo.siguiente
+        ##-------------Creacion de texto plato y conversion
+        strGrafica+="}"
+        documentotxt="listaForma1.txt"
+        with open(documentotxt,'w') as grafica: 
+            grafica.write(strGrafica)
+        pdf="listaForma1.pdf"
+        os.system("neato -Tpdf "+documentotxt+" -o "+pdf)
+        webbrowser.open(pdf)
     
+
 
     def mostrar_celda(self):
         tmp=self.primero

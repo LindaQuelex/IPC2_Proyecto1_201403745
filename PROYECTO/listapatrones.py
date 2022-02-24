@@ -17,7 +17,7 @@ class ListaPatrones():
         else:
            self.ultimo.setsiguiente(nuevopatron)
            self.ultimo=nuevopatron
-           nuevopatron.nuevacelda
+           #nuevopatron.nuevacelda
         nuevopatron.listaceldas.inserta_al_final_celda
         return nuevopatron
 
