@@ -1,0 +1,5 @@
+ digraph G { 
+w[label="w",color = "green",arrowhead = "square",fillcolor="red",style="filled",shape="box"];
+b[label="b",color = "green",arrowhead = "square",fillcolor="red",style="filled",shape="box"];
+w->b;
+}

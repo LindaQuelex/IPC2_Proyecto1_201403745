@@ -47,12 +47,19 @@ def elementTree(ruta):
                         print("Se inserto el color:", cadenacolores.getcolorcelda())
                         #listapisos.celda.inserta_al_final_celda()
     
-    
                 #listapisos.celda.mostrar_celda()
                 # listapisos=Crearlistapisos.inserta_al_final(nombrepiso,row, colum, cost_flip, cost_slide)     
     #Crearlistapisos.mostrar_pisos()
     
-Crearlistaceldas.grafica()
+   
+#Crearlistaceldas.recorrer_lista()
+Crearlistaceldas.inserta_al_final_celda("w")
+Crearlistaceldas.inserta_al_final_celda("b")
+Crearlistaceldas.mostrar_celda()
+Crearlistaceldas.grafica_inicial()
+
+
+
 
 
 elementTree('./ARCHIVOS ENTRADA/piso.xml')

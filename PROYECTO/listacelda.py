@@ -23,14 +23,14 @@ class ListaCelda():
         return nuevacelda
     
 
-    def grafica(self):
+    def grafica_inicial(self):
         auxNodo = self.primero
+       
         strGrafica=" digraph G { \n"
-        ##----------while para crear nodos
         while auxNodo is not None:
-            strGrafica += '{}[label="{}",color = "green",arrowhead = "diamond",fillcolor="red",style="filled",shape="box"];\n'.format(auxNodo.colorcelda,auxNodo.colorcelda)
+            strGrafica += '{}[label="{}",color = "green",arrowhead = "square",fillcolor="red",style="filled",shape="box"];\n'.format(auxNodo.colorcelda,auxNodo.colorcelda)
             auxNodo=auxNodo.siguiente
-        ##----------while para Unir nodos
+
         auxNodo=self.primero
         while auxNodo is not None:
             if auxNodo.siguiente is None:
@@ -38,15 +38,15 @@ class ListaCelda():
             else: 
                 strGrafica += '{}->{};\n'.format(auxNodo.colorcelda,auxNodo.siguiente.colorcelda)
             auxNodo=auxNodo.siguiente
-        ##-------------Creacion de texto plato y conversion
         strGrafica +="}"
-        documentotxt="Graficapiso1.txt"
+        documentotxt="Graficapisoinicial.txt"
         with open(documentotxt,'w') as grafica: 
             grafica.write(strGrafica)
-        pdf="Graficapiso1.pdf"
-        os.system("neato -Tpdf "+documentotxt+" -o "+pdf)
+        pdf="Graficapisoinicial.pdf"
+        os.system('neato -Tpdf '+documentotxt+" -o "+pdf)
         webbrowser.open(pdf)
 
+    
     def recorrer_lista(self):
         if self.iniciarnodocelda is None:
             print("La lista no tiene elementos")
@@ -54,7 +54,7 @@ class ListaCelda():
         else:
             n = self.iniciarnodocelda
             while n is not None:
-                print("La lista de celdas es:",n.color , "funciona el método de recorrer lista")    
+                print("La lista de celdas es:",n.colorcelda , "funciona el método de recorrer lista")    
                 n = n.siguiente
 
 
