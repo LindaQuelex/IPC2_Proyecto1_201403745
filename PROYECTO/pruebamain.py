@@ -6,7 +6,7 @@ from listapisos import ListaPisos
 Crearlistapisos = ListaPisos()
 Crearlistacodpatron =ListaPatrones()
 Crearlistaceldas =ListaCelda()
-graficainicio= ListaCelda()
+
 
 def elementTree(ruta):
     tree=ET.parse(ruta)
@@ -46,15 +46,13 @@ def elementTree(ruta):
                         cadenacolores= codpatronesinlist.listaceldas.inserta_al_final_celda(caracter)
                         print("Se inserto el color:", cadenacolores.getcolorcelda())
                         #listapisos.celda.inserta_al_final_celda()
-
+    
+    
                 #listapisos.celda.mostrar_celda()
                 # listapisos=Crearlistapisos.inserta_al_final(nombrepiso,row, colum, cost_flip, cost_slide)     
     #Crearlistapisos.mostrar_pisos()
     
-    graficainicio.inserta_al_final_celda("w")
-    graficainicio.inserta_al_final_celda("B")
-    graficainicio.inserta_al_final_celda("w")
-    graficainicio.grafica()
+Crearlistaceldas.grafica()
 
 
 elementTree('./ARCHIVOS ENTRADA/piso.xml')

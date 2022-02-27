@@ -2,7 +2,7 @@
 from nodocelda import NodoCelda
 import os
 import webbrowser
-
+import graphviz
 
 class ListaCelda():
     def __init__(self):
@@ -29,7 +29,6 @@ class ListaCelda():
         ##----------while para crear nodos
         while auxNodo is not None:
             strGrafica += '{}[label="{}",color = "green",arrowhead = "diamond",fillcolor="red",style="filled",shape="box"];\n'.format(auxNodo.colorcelda,auxNodo.colorcelda)
-
             auxNodo=auxNodo.siguiente
         ##----------while para Unir nodos
         auxNodo=self.primero
@@ -40,14 +39,23 @@ class ListaCelda():
                 strGrafica += '{}->{};\n'.format(auxNodo.colorcelda,auxNodo.siguiente.colorcelda)
             auxNodo=auxNodo.siguiente
         ##-------------Creacion de texto plato y conversion
-        strGrafica+="}"
-        documentotxt="listaForma1.txt"
+        strGrafica +="}"
+        documentotxt="Graficapiso1.txt"
         with open(documentotxt,'w') as grafica: 
             grafica.write(strGrafica)
-        pdf="listaForma1.pdf"
+        pdf="Graficapiso1.pdf"
         os.system("neato -Tpdf "+documentotxt+" -o "+pdf)
         webbrowser.open(pdf)
-    
+
+    def recorrer_lista(self):
+        if self.iniciarnodocelda is None:
+            print("La lista no tiene elementos")
+            return
+        else:
+            n = self.iniciarnodocelda
+            while n is not None:
+                print("La lista de celdas es:",n.color , "funciona el método de recorrer lista")    
+                n = n.siguiente
 
 
     def mostrar_celda(self):
@@ -143,15 +151,7 @@ class ListaCelda():
                     n.anterior.siguiente = nuevonodo
                 n.anterior = nuevonodo
 
-    def recorrer_lista(self):
-        if self.iniciarnodocelda is None:
-            print("La lista no tiene elementos")
-            return
-        else:
-            n = self.iniciarnodocelda
-            while n is not None:
-                print("La lista de celdas es:",n.color , "funciona el método de recorrer lista")    #cambiar a " "
-                n = n.siguiente
+
 
     def eliminar_al_inicio(self):
         if self.iniciarnodocelda is None:
