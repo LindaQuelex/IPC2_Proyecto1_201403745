@@ -5,74 +5,50 @@ from listapatrones import ListaPatrones
 from listapisos import ListaPisos
 
 Crearlistapisos = ListaPisos()
-Crearlistacodpatron =ListaPatrones()
-Crearlistaceldas =ListaCelda()
 
 def elementTree(ruta):
+    contador=0
     tree=ET.parse(ruta)
     raiz= tree.getroot()
     print (raiz , "posición en memoria de la etiqueta raíz")
     for piso in raiz:
         nombrepiso=(piso.attrib['nombre'])
-        print(nombrepiso)
-        print("R=fila, C=columna, F=costo de voltear, S=costo de deslizar")
         for datospiso in piso:
-            if datospiso.tag =="R":
             dptag=datospiso.tag
             dp=datospiso.text
-            print (dptag, dp)
+            if datospiso.tag=="R":
+                row= datospiso.text
+            if datospiso.tag=="C":
+                colum=datospiso.text
+            if datospiso.tag=="F":
+                cost_flip=datospiso.text
+            if datospiso.tag =="S":
+                cost_slide=datospiso.text
+                Crearlistapisos.inserta_al_final(nombrepiso,row, colum, cost_flip, cost_slide)
             if datospiso.tag=="patrones":
                 for patron in datospiso:
+                    contadordos=0
                     patrontag=patron.tag
                     codigopatron=patron.attrib
                     cadenapatron=patron.text
-                    print (patrontag, codigopatron, cadenapatron)
+                    Crearlistapisos.retornarNodoPiso(contador).patrones.inserta_al_final_patrones(codigopatron)
                     colorcelda=cadenapatron
                     for caracter in colorcelda:
-                        print(caracter)
-            listapisos=Crearlistapisos.inserta_al_final(nombrepiso,dp, None,None,None) 
-            Crearlistapisos.mostrar_pisos() 
-
-        # print("aqui empieza la implementación de listas")
-        # listapisos=Crearlistapisos.inserta_al_final(nombrepiso,None,None, None,None)   
-        # listapisos.patrones.inserta_al_final_patrones(codigopatron) 
-        # Crearlistapisos.mostrar_pisos()
-        # listapisos.patrones.mostrar_patrones()
-              
-
+                        Crearlistapisos.retornarNodoPiso(contador).patrones.retornar_nodo(contadordos).listaceldas.inserta_al_final_celda(caracter)
+                    contadordos=contadordos+1
+                contador=contador+1
 
 elementTree('./ARCHIVOS ENTRADA/piso.xml')
-
-
-
-
-'''PRUEBA CON MINIDOM
-class Lecturaxml():
-    ruta = ("piso.xml")
-    doc = minidom.parse(ruta)
-    nombrepisoxml = doc.getElementsByTagName ("piso")
-    print (nombrepisoxml)
-
-    print ('\nLos nombre de los pisos son:')
-    for elem in nombrepisoxml:
-        print(elem.attributes['nombre'].value)
-        
-    print('\nLos datos son: ')
-    for elem in nombrepisoxml:
-        print(elem.firstChild.data)'''
-
-'''crearpisos=Crearlistapisos.inserta_al_final(piso.attrib['nombre'], R.text , C.text, F.text, S.text)         
-        patrones = piso[4]
-        for patron in patrones:
-            y=patron.tag
-            z=patron.text
-            print("prueba1")
-            #crearpisos.patrones.inserta_al_final_patrones(p.text)
-            print("prueba2")
-        #crearpisos.patrones.mostrar_patrones()
-             color=patron.text[0]
-             for c in p: 
-                  #print("se inserto",p.tag)
-                 crearpisos.celda.inserta_al_final_celda(p.text)
-             crearpisos.celda.mostrar_celda()     
-     Crearlistapisos.mostrar_pisos()'''
+print("*************************************************************")
+print("PRUEBA DE INSERTAR EN LISTA")
+print("*************************************************************")
+Crearlistapisos.mostrar_pisos()
+print("*************************************************************")
+print("PRUEBA DE BUSCAR UN NODO")
+print("*************************************************************")
+Crearlistapisos.retornarNodoPiso(1).patrones.mostrar_patrones()
+#Crearlistapisos.retornarNodoPiso(1).patrones.retornar_nodo(1).listaceldas.mostrar_celda()
+print("*************************************************************")
+print("PRUEBA DE MÉTODO GRAFICAR")
+print("*************************************************************")
+Crearlistapisos.retornarNodoPiso(0).patrones.retornar_nodo(0).listaceldas.grafica_inicial()

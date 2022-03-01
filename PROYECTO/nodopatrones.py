@@ -2,12 +2,17 @@ from listacelda import ListaCelda
 
 class NodoPatrones():
     def __init__(self, codigopatrones):
-        
+        self.id=0
         self.codigopatrones= codigopatrones
         self.anterior=None
         self.siguiente=None
         self.listaceldas=ListaCelda()
 
+    def getid(self):
+        return self.id
+
+    def setid(self, id):
+        self.id =id
 
     def getcodigopatrones(self):
         return self.codigopatrones

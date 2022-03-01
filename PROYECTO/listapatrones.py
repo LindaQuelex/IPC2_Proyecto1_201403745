@@ -10,6 +10,7 @@ class ListaPatrones():
 
     def inserta_al_final_patrones(self, codigopatrones):
         nuevopatron=NodoPatrones(codigopatrones)
+        nuevopatron.setid(self.size)
         self.size += 1 
         if self.primero is None:
             self.primero=nuevopatron
@@ -21,9 +22,18 @@ class ListaPatrones():
         nuevopatron.listaceldas.inserta_al_final_celda
         return nuevopatron
 
+    def retornar_nodo(self, id):
+        aux=self.primero
+        while aux.getid()< id:
+            aux=aux.getsiguiente()
+        return aux
+
+        
+
     def mostrar_patrones(self):
         tmp=self.primero
         for i in range(self.size):
-            print(i,'Las celdas del patron son:', tmp.listaceldas())
+            print('Patron: ',tmp.getcodigopatrones(),' Las celdas del patron son:')
+            tmp.listaceldas.mostrar_celda()
             tmp = tmp.getsiguiente()
         

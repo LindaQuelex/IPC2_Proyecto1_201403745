@@ -3,6 +3,7 @@ from listacelda import ListaCelda
 
 class NodoPiso():
     def __init__(self, nombrepiso, R, C, F, S) :
+        self.id=0
         self.nombrepiso= nombrepiso
         self.fila= R
         self.columna= C
@@ -10,8 +11,14 @@ class NodoPiso():
         self.precioslide= S
         self.siguiente=None
         self.patrones= ListaPatrones()
-        self.celda= ListaCelda()
+       
     
+    def setId(self,id):
+        self.id=id
+
+    def getId(self):
+        return self.id
+
     def getnombrepiso(self):
         return self.nombrepiso
     

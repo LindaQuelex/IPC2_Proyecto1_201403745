@@ -1,5 +1,33 @@
  digraph G { 
-w[label="w",color = "green",arrowhead = "square",fillcolor="red",style="filled",shape="box"];
-b[label="b",color = "green",arrowhead = "square",fillcolor="red",style="filled",shape="box"];
-w->b;
+W[label="W",color = "black",arrowhead = "square",fillcolor="blue",style="filled",shape="box"];
+B[label="B",color = "black",arrowhead = "square",fillcolor="blue",style="filled",shape="box"];
+W[label="W",color = "black",arrowhead = "square",fillcolor="blue",style="filled",shape="box"];
+B[label="B",color = "black",arrowhead = "square",fillcolor="blue",style="filled",shape="box"];
+W[label="W",color = "black",arrowhead = "square",fillcolor="blue",style="filled",shape="box"];
+W[label="W",color = "black",arrowhead = "square",fillcolor="blue",style="filled",shape="box"];
+W[label="W",color = "black",arrowhead = "square",fillcolor="blue",style="filled",shape="box"];
+B[label="B",color = "black",arrowhead = "square",fillcolor="blue",style="filled",shape="box"];
+B[label="B",color = "black",arrowhead = "square",fillcolor="blue",style="filled",shape="box"];
+W[label="W",color = "black",arrowhead = "square",fillcolor="blue",style="filled",shape="box"];
+B[label="B",color = "black",arrowhead = "square",fillcolor="blue",style="filled",shape="box"];
+W[label="W",color = "black",arrowhead = "square",fillcolor="blue",style="filled",shape="box"];
+W[label="W",color = "black",arrowhead = "square",fillcolor="blue",style="filled",shape="box"];
+W[label="W",color = "black",arrowhead = "square",fillcolor="blue",style="filled",shape="box"];
+W[label="W",color = "black",arrowhead = "square",fillcolor="blue",style="filled",shape="box"];
+W[label="W",color = "black",arrowhead = "square",fillcolor="blue",style="filled",shape="box"];
+W->B;
+B->W;
+W->B;
+B->W;
+W->W;
+W->W;
+W->B;
+B->B;
+B->W;
+W->B;
+B->W;
+W->W;
+W->W;
+W->W;
+W->W;
 }
