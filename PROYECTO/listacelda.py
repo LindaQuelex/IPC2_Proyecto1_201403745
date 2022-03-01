@@ -26,9 +26,9 @@ class ListaCelda():
     def grafica_inicial(self):
         temp = self.primero
        
-        strGrafica=" digraph G { \n"
+        graficadefault=" digraph G { \n"
         while temp is not None:
-            strGrafica += '{}[label="{}",color = "black",arrowhead = "square",fillcolor="blue",style="filled",shape="box"];\n'.format(temp.colorcelda,temp.colorcelda)
+            graficadefault += '{}[label="{}",color = "black",fillcolor="black", fontcolor="green",style="filled",shape="box"];\n'.format(temp.colorcelda,temp.colorcelda)
             temp=temp.siguiente
 
         temp=self.primero
@@ -36,12 +36,12 @@ class ListaCelda():
             if temp.siguiente is None:
                 None
             else: 
-                strGrafica += '{}->{};\n'.format(temp.colorcelda,temp.siguiente.colorcelda)
+                graficadefault += '{}->{};\n'.format(temp.colorcelda,temp.siguiente.colorcelda)
             temp=temp.siguiente
-        strGrafica +="}"
+        graficadefault +="}"
         documentotxt="Graficapisoinicial.txt"
         with open(documentotxt,'w') as grafica: 
-            grafica.write(strGrafica)
+            grafica.write(graficadefault)
         pdf="Graficapisoinicial.pdf"
         os.system('dot -Tpdf '+documentotxt+" -o "+pdf)
         webbrowser.open(pdf)
@@ -61,13 +61,13 @@ class ListaCelda():
     def mostrar_celda(self):
         tmp=self.primero
         for i in range(self.size):
-            print('*El color de la celda es:',tmp.getcolorcelda())
+            print(i,'*El color de la celda es:',tmp.getcolorcelda())
             tmp = tmp.getsiguiente()
 
 
     def retornar_nodo(self, id):
         aux=self.primero
-        while aux.getid()< id:
+        while aux.getidcelda()< id:
             aux=aux.getsiguiente()
         return aux
 

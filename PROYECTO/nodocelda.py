@@ -3,9 +3,16 @@ class NodoCelda():
        
         # self.filacelda = r
         # self.columnacelda = c
+        self.idcelda=0
         self.colorcelda =color
         self.siguiente = None
-        self.anterior = None    
+        self.anterior = None   
+
+    def getidcelda(self):
+        return self.idcelda
+
+    def setidcelda(self, idcelda):
+        self.idcelda=idcelda
 
     # def getcodigopatron(self):
     #     return self.codigopatron

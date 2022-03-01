@@ -33,7 +33,7 @@ class ListaPatrones():
     def mostrar_patrones(self):
         tmp=self.primero
         for i in range(self.size):
-            print('Patron: ',tmp.getcodigopatrones(),' Las celdas del patron son:')
+            print(i,'Patron: ',tmp.getcodigopatrones(),' Las celdas del patron son:')
             tmp.listaceldas.mostrar_celda()
             tmp = tmp.getsiguiente()
         

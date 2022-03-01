@@ -26,8 +26,8 @@ def elementTree(ruta):
                 cost_slide=datospiso.text
                 Crearlistapisos.inserta_al_final(nombrepiso,row, colum, cost_flip, cost_slide)
             if datospiso.tag=="patrones":
+                contadordos=0
                 for patron in datospiso:
-                    contadordos=0
                     patrontag=patron.tag
                     codigopatron=patron.attrib
                     cadenapatron=patron.text
@@ -44,11 +44,12 @@ print("PRUEBA DE INSERTAR EN LISTA")
 print("*************************************************************")
 Crearlistapisos.mostrar_pisos()
 print("*************************************************************")
-print("PRUEBA DE BUSCAR UN NODO")
+print("PRUEBA DE RETORNAR UN NODO")
 print("*************************************************************")
 Crearlistapisos.retornarNodoPiso(1).patrones.mostrar_patrones()
-#Crearlistapisos.retornarNodoPiso(1).patrones.retornar_nodo(1).listaceldas.mostrar_celda()
+
+#Crearlistapisos.retornarNodoPiso(0).patrones.retornar_nodo(0).listaceldas.mostrar_celda()
 print("*************************************************************")
-print("PRUEBA DE MÉTODO GRAFICAR")
+print("EL PATRON INICIAL ES: VER ARCHIVO PDF")
 print("*************************************************************")
 Crearlistapisos.retornarNodoPiso(0).patrones.retornar_nodo(0).listaceldas.grafica_inicial()
