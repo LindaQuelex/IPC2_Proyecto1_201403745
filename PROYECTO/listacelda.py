@@ -47,6 +47,29 @@ class ListaCelda():
         os.system('dot -Tpdf '+documentotxt+" -o "+pdf)
         webbrowser.open(pdf)
 
+    def grafica_seleccionada(self):
+        temp = self.primero
+       
+        graficadefault=" digraph G { \n"
+        
+        while temp is not None:
+            graficadefault += '{}[label="{}",color = "black",fillcolor="white", fontcolor="black",style="filled",shape="box"];\n'.format(temp.getidcelda,temp.colorcelda)
+            temp=temp.siguiente
+
+        temp=self.primero
+        while temp is not None:
+            if temp.siguiente is None:
+                None
+            else: 
+                graficadefault += '{}->{};\n'.format(temp.getidcelda,temp.siguiente.getidcelda)
+            temp=temp.siguiente
+        graficadefault +="}"
+        documentotxt="Graficapisoseleccionada.txt"
+        with open(documentotxt,'w') as grafica: 
+            grafica.write(graficadefault)
+        pdf="Graficapisoseleccionada.pdf"
+        os.system('dot -Tpdf '+documentotxt+" -o "+pdf)
+        webbrowser.open(pdf)
     
     def recorrer_lista(self):
         if self.iniciarnodocelda is None:
