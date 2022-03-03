@@ -1,17 +1,11 @@
  digraph G { 
-<bound method NodoCelda.getidcelda of <nodocelda.NodoCelda object at 0x0000023B1BE8C0A0>>[label="W",color = "black",fillcolor="white", fontcolor="black",style="filled",shape="box"];
-<bound method NodoCelda.getidcelda of <nodocelda.NodoCelda object at 0x0000023B1BE8C070>>[label="B",color = "black",fillcolor="white", fontcolor="black",style="filled",shape="box"];
-<bound method NodoCelda.getidcelda of <nodocelda.NodoCelda object at 0x0000023B1BE8C190>>[label="W",color = "black",fillcolor="white", fontcolor="black",style="filled",shape="box"];
-<bound method NodoCelda.getidcelda of <nodocelda.NodoCelda object at 0x0000023B1BE8C1F0>>[label="B",color = "black",fillcolor="white", fontcolor="black",style="filled",shape="box"];
-<bound method NodoCelda.getidcelda of <nodocelda.NodoCelda object at 0x0000023B1BE8C250>>[label="W",color = "black",fillcolor="white", fontcolor="black",style="filled",shape="box"];
-<bound method NodoCelda.getidcelda of <nodocelda.NodoCelda object at 0x0000023B1BE8C2B0>>[label="W",color = "black",fillcolor="white", fontcolor="black",style="filled",shape="box"];
-<bound method NodoCelda.getidcelda of <nodocelda.NodoCelda object at 0x0000023B1BE8C310>>[label="W",color = "black",fillcolor="white", fontcolor="black",style="filled",shape="box"];
-<bound method NodoCelda.getidcelda of <nodocelda.NodoCelda object at 0x0000023B1BE8C370>>[label="B",color = "black",fillcolor="white", fontcolor="black",style="filled",shape="box"];
-<bound method NodoCelda.getidcelda of <nodocelda.NodoCelda object at 0x0000023B1BE8C0A0>>-><bound method NodoCelda.getidcelda of <nodocelda.NodoCelda object at 0x0000023B1BE8C070>>;
-<bound method NodoCelda.getidcelda of <nodocelda.NodoCelda object at 0x0000023B1BE8C070>>-><bound method NodoCelda.getidcelda of <nodocelda.NodoCelda object at 0x0000023B1BE8C190>>;
-<bound method NodoCelda.getidcelda of <nodocelda.NodoCelda object at 0x0000023B1BE8C190>>-><bound method NodoCelda.getidcelda of <nodocelda.NodoCelda object at 0x0000023B1BE8C1F0>>;
-<bound method NodoCelda.getidcelda of <nodocelda.NodoCelda object at 0x0000023B1BE8C1F0>>-><bound method NodoCelda.getidcelda of <nodocelda.NodoCelda object at 0x0000023B1BE8C250>>;
-<bound method NodoCelda.getidcelda of <nodocelda.NodoCelda object at 0x0000023B1BE8C250>>-><bound method NodoCelda.getidcelda of <nodocelda.NodoCelda object at 0x0000023B1BE8C2B0>>;
-<bound method NodoCelda.getidcelda of <nodocelda.NodoCelda object at 0x0000023B1BE8C2B0>>-><bound method NodoCelda.getidcelda of <nodocelda.NodoCelda object at 0x0000023B1BE8C310>>;
-<bound method NodoCelda.getidcelda of <nodocelda.NodoCelda object at 0x0000023B1BE8C310>>-><bound method NodoCelda.getidcelda of <nodocelda.NodoCelda object at 0x0000023B1BE8C370>>;
+<bound method NodoCelda.getidcelda of <nodocelda.NodoCelda object at 0x000001A67CC7E970>>[label="W",color = "black",fillcolor="white", fontcolor="white",style="filled",shape="box"];
+<bound method NodoCelda.getidcelda of <nodocelda.NodoCelda object at 0x000001A67CC7E9D0>>[label="B",color = "black",fillcolor="black", fontcolor="black",style="filled",shape="box"];
+<bound method NodoCelda.getidcelda of <nodocelda.NodoCelda object at 0x000001A67CC7EA30>>[label="B",color = "black",fillcolor="black", fontcolor="black",style="filled",shape="box"];
+<bound method NodoCelda.getidcelda of <nodocelda.NodoCelda object at 0x000001A67CC7EA90>>[label="B",color = "black",fillcolor="black", fontcolor="black",style="filled",shape="box"];
+<bound method NodoCelda.getidcelda of <nodocelda.NodoCelda object at 0x000001A67CC7EAF0>>[label="B",color = "black",fillcolor="black", fontcolor="black",style="filled",shape="box"];
+<bound method NodoCelda.getidcelda of <nodocelda.NodoCelda object at 0x000001A67CC7E970>>-><bound method NodoCelda.getidcelda of <nodocelda.NodoCelda object at 0x000001A67CC7E9D0>>;
+<bound method NodoCelda.getidcelda of <nodocelda.NodoCelda object at 0x000001A67CC7E9D0>>-><bound method NodoCelda.getidcelda of <nodocelda.NodoCelda object at 0x000001A67CC7EA30>>;
+<bound method NodoCelda.getidcelda of <nodocelda.NodoCelda object at 0x000001A67CC7EA30>>-><bound method NodoCelda.getidcelda of <nodocelda.NodoCelda object at 0x000001A67CC7EA90>>;
+<bound method NodoCelda.getidcelda of <nodocelda.NodoCelda object at 0x000001A67CC7EA90>>-><bound method NodoCelda.getidcelda of <nodocelda.NodoCelda object at 0x000001A67CC7EAF0>>;
 }

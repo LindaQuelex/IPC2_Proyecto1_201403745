@@ -43,15 +43,25 @@ print("******************************")
 print("PRUEBA DE INSERTAR EN LISTA")
 print("******************************")
 Crearlistapisos.mostrar_pisos()
+
+
 print("*************************************************************")
-obtenerpiso=input("INGRESE EL NÚMERO DE PISO A DISEÑAR")
-obtenerpatron=input("INGRESE EL NÚMERO CORRELATIVO DEL PATRON A DISEÑAR")
+obtenerpiso=input("INGRESE EL NÚMERO DE PISO A DISEÑAR:")
+obtenerpatron=input("INGRESE EL NÚMERO CORRELATIVO DEL PATRON A DISEÑAR:")
 print("*************************************************************")
+
+if int(obtenerpiso)<= Crearlistapisos.size:
+
+    Crearlistapisos.retornarNodoPiso(int(obtenerpiso)).patrones.retornar_nodo(0).listaceldas.grafica_inicial()
+    Crearlistapisos.retornarNodoPiso(int(obtenerpiso)).patrones.retornar_nodo(int(obtenerpatron)).listaceldas.grafica_seleccionada()
+    print("*************************************************************")
+    print("EL PATRON INICIAL ES: VER ARCHIVO PDF ------>Grafica piso inicial.pdf")
+    print("EL PATRON A DISEÑAR ES: VER ARCHIVO PDF------>Grafica piso seleccionado.pdf")
+    print("*************************************************************")
+
+else:
+    print("No existe :)")
+
 #Crearlistapisos.retornarNodoPiso(int(obtenerpiso)).patrones.mostrar_patrones()
 #Crearlistapisos.retornarNodoPiso(0).patrones.retornar_nodo(0).listaceldas.mostrar_celda()
-print("*************************************************************")
-print("EL PATRON INICIAL ES: VER ARCHIVO PDF ------>Grafica piso inicial")
-print("EL PATRON A DISEÑAR ES: VER ARCHIVO PDF------>Grafica piso seleccionado")
-print("*************************************************************")
-Crearlistapisos.retornarNodoPiso(int(obtenerpiso)).patrones.retornar_nodo(0).listaceldas.grafica_inicial()
-Crearlistapisos.retornarNodoPiso(int(obtenerpiso)).patrones.retornar_nodo(int(obtenerpatron)).listaceldas.grafica_seleccionada()
+

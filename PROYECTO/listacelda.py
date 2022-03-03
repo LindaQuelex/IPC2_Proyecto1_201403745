@@ -1,4 +1,5 @@
 
+from turtle import fillcolor
 from nodocelda import NodoCelda
 import os
 import webbrowser
@@ -28,8 +29,13 @@ class ListaCelda():
        
         graficadefault=" digraph G { \n"
         while temp is not None:
-            graficadefault += '{}[label="{}",color = "black",fillcolor="white", fontcolor="black",style="filled",shape="box"];\n'.format(temp.getidcelda,temp.colorcelda)
-            temp=temp.siguiente
+            if temp.colorcelda =="W":
+                graficadefault += '{}[label="{}",color = "black",fillcolor="{}", fontcolor="white",style="filled",shape="box"];\n'.format(temp.getidcelda,temp.colorcelda,'white')
+                temp=temp.siguiente
+            else:
+                graficadefault += '{}[label="{}",color = "black",fillcolor="{}", fontcolor="black",style="filled",shape="box"];\n'.format(temp.getidcelda,temp.colorcelda,'black')
+                temp=temp.siguiente
+
 
         temp=self.primero
         while temp is not None:
@@ -52,8 +58,13 @@ class ListaCelda():
         graficadefault=" digraph G { \n"
         
         while temp is not None:
-            graficadefault += '{}[label="{}",color = "black",fillcolor="white", fontcolor="black",style="filled",shape="box"];\n'.format(temp.getidcelda,temp.colorcelda)
-            temp=temp.siguiente
+            if temp.colorcelda =="W":
+                graficadefault += '{}[label="{}",color = "black",fillcolor="white", fontcolor="white",style="filled",shape="box"];\n'.format(temp.getidcelda,temp.colorcelda)
+                temp=temp.siguiente
+            else:
+                graficadefault += '{}[label="{}",color = "black",fillcolor="{}", fontcolor="black",style="filled",shape="box"];\n'.format(temp.getidcelda,temp.colorcelda,'black')
+                temp=temp.siguiente
+
 
         temp=self.primero
         while temp is not None:
