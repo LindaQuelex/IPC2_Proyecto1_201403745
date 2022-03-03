@@ -27,7 +27,6 @@ class ListaCelda():
         temp = self.primero
        
         graficadefault=" digraph G { \n"
-        
         while temp is not None:
             graficadefault += '{}[label="{}",color = "black",fillcolor="white", fontcolor="black",style="filled",shape="box"];\n'.format(temp.getidcelda,temp.colorcelda)
             temp=temp.siguiente
