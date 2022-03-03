@@ -33,7 +33,7 @@ class ListaPisos():
     def mostrar_pisos(self):
         tmp=self.primero
         for i in range(self.size):
-            print(i,'El nombre del piso es:', tmp.getnombrepiso(),'\n','-cantidad de filas:',tmp.getfila(),'\n','-cantidad de columnas:',tmp.getcolumna(),'\n','-precio por voltear:',tmp.getprecioflip(), '\n','-precio por deslizar:',tmp.getprecioslide())
+            print('(',i,')','El nombre del piso es:', tmp.getnombrepiso(),'\n','-cantidad de filas:',tmp.getfila(),'\n','-cantidad de columnas:',tmp.getcolumna(),'\n','-precio por voltear:',tmp.getprecioflip(), '\n','-precio por deslizar:',tmp.getprecioslide())
             tmp.patrones.mostrar_patrones()
             tmp = tmp.getsiguiente()
 

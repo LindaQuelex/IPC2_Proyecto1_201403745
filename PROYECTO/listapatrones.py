@@ -33,7 +33,7 @@ class ListaPatrones():
     def mostrar_patrones(self):
         tmp=self.primero
         for i in range(self.size):
-            print(i,'Patron: ',tmp.getcodigopatrones(),' Las celdas del patron son:')
+            print('     El correlativo del patron es: ', i,'\n','     Patron: ',tmp.getcodigopatrones(),' Las celdas del patron son:')
             tmp.listaceldas.mostrar_celda()
             tmp = tmp.getsiguiente()
         

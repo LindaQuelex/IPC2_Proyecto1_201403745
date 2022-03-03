@@ -63,10 +63,10 @@ class ListaCelda():
                 graficadefault += '{}->{};\n'.format(temp.getidcelda,temp.siguiente.getidcelda)
             temp=temp.siguiente
         graficadefault +="}"
-        documentotxt="Graficapisoseleccionada.txt"
+        documentotxt="Graficapisoseleccionado.txt"
         with open(documentotxt,'w') as grafica: 
             grafica.write(graficadefault)
-        pdf="Graficapisoseleccionada.pdf"
+        pdf="Graficapisoseleccionado.pdf"
         os.system('dot -Tpdf '+documentotxt+" -o "+pdf)
         webbrowser.open(pdf)
     
@@ -84,7 +84,7 @@ class ListaCelda():
     def mostrar_celda(self):
         tmp=self.primero
         for i in range(self.size):
-            print(i,'*El color de la celda es:',tmp.getcolorcelda())
+            print("     ",i,'  El color de piso es:',tmp.getcolorcelda())
             tmp = tmp.getsiguiente()
 
 

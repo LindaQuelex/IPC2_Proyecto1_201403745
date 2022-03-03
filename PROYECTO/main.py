@@ -29,7 +29,7 @@ def elementTree(ruta):
                 contadordos=0
                 for patron in datospiso:
                     patrontag=patron.tag
-                    codigopatron=patron.attrib
+                    codigopatron=patron.attrib['codigo']
                     cadenapatron=patron.text
                     Crearlistapisos.retornarNodoPiso(contador).patrones.inserta_al_final_patrones(codigopatron)
                     colorcelda=cadenapatron
@@ -39,9 +39,9 @@ def elementTree(ruta):
                 contador=contador+1
 
 elementTree('./ARCHIVOS ENTRADA/piso.xml')
-print("*************************************************************")
+print("******************************")
 print("PRUEBA DE INSERTAR EN LISTA")
-print("*************************************************************")
+print("******************************")
 Crearlistapisos.mostrar_pisos()
 print("*************************************************************")
 obtenerpiso=input("INGRESE EL NÚMERO DE PISO A DISEÑAR")
@@ -50,7 +50,8 @@ print("*************************************************************")
 #Crearlistapisos.retornarNodoPiso(int(obtenerpiso)).patrones.mostrar_patrones()
 #Crearlistapisos.retornarNodoPiso(0).patrones.retornar_nodo(0).listaceldas.mostrar_celda()
 print("*************************************************************")
-print("EL PATRON INICIAL ES: VER ARCHIVO PDF GRAFFICAPISOSINICIAL")
+print("EL PATRON INICIAL ES: VER ARCHIVO PDF ------>Grafica piso inicial")
+print("EL PATRON A DISEÑAR ES: VER ARCHIVO PDF------>Grafica piso seleccionado")
 print("*************************************************************")
 Crearlistapisos.retornarNodoPiso(int(obtenerpiso)).patrones.retornar_nodo(0).listaceldas.grafica_inicial()
 Crearlistapisos.retornarNodoPiso(int(obtenerpiso)).patrones.retornar_nodo(int(obtenerpatron)).listaceldas.grafica_seleccionada()
