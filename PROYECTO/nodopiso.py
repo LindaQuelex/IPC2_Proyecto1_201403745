@@ -77,7 +77,6 @@ class NodoPiso():
     #     self.fila.crearfila()
     #     self.columna.crearcolumna()
         
-        
     #crear lista vacia con base a variables declaradas
     #for anidado para fila y columna
 

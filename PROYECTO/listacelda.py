@@ -106,6 +106,16 @@ class ListaCelda():
         return aux
 
 
+    def cambiarnodo(self, id, nuevo_Dato):
+        if id>=0 and id<self.size:
+            actual=self.ultimo
+
+            for i in range(id):
+                actual=actual.siguiente
+            actual.colorcelda =nuevo_Dato
+        else:
+             raise Exception('correlativo no valido.')
+
 
 
 

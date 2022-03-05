@@ -40,7 +40,7 @@ def elementTree(ruta):
 
 elementTree('./ARCHIVOS ENTRADA/piso.xml')
 print("******************************")
-print("PRUEBA DE INSERTAR EN LISTA")
+print("PISOS ARTESANALES DISPONIBLES")
 print("******************************")
 Crearlistapisos.mostrar_pisos()
 
@@ -50,18 +50,17 @@ obtenerpiso=input("INGRESE EL NÚMERO DE PISO A DISEÑAR:")
 obtenerpatron=input("INGRESE EL NÚMERO CORRELATIVO DEL PATRON A DISEÑAR:")
 print("*************************************************************")
 
-if int(obtenerpiso)<= Crearlistapisos.size:
-
-    Crearlistapisos.retornarNodoPiso(int(obtenerpiso)).patrones.retornar_nodo(0).listaceldas.grafica_inicial()
-    Crearlistapisos.retornarNodoPiso(int(obtenerpiso)).patrones.retornar_nodo(int(obtenerpatron)).listaceldas.grafica_seleccionada()
-    print("*************************************************************")
-    print("EL PATRON INICIAL ES: VER ARCHIVO PDF ------>Grafica piso inicial.pdf")
-    print("EL PATRON A DISEÑAR ES: VER ARCHIVO PDF------>Grafica piso seleccionado.pdf")
-    print("*************************************************************")
-
+if int(obtenerpiso)< Crearlistapisos.size:
+    if int(obtenerpatron)< Crearlistapisos.retornarNodoPiso(int(obtenerpiso)).patrones.size:
+        Crearlistapisos.retornarNodoPiso(int(obtenerpiso)).patrones.retornar_nodo(0).listaceldas.grafica_inicial()
+        Crearlistapisos.retornarNodoPiso(int(obtenerpiso)).patrones.retornar_nodo(int(obtenerpatron)).listaceldas.grafica_seleccionada()
+        print("*************************************************************")
+        print("EL PATRON INICIAL ES: VER ARCHIVO PDF ------>Grafica piso inicial.pdf")
+        print("EL PATRON A DISEÑAR ES: VER ARCHIVO PDF------>Grafica piso seleccionado.pdf")
+        print("*************************************************************")
+    else:
+        print("No exite le número de patron xd")
+    
 else:
-    print("No existe :)")
-
-#Crearlistapisos.retornarNodoPiso(int(obtenerpiso)).patrones.mostrar_patrones()
-#Crearlistapisos.retornarNodoPiso(0).patrones.retornar_nodo(0).listaceldas.mostrar_celda()
+    print("No existe el número de piso :)")
 

@@ -7,8 +7,6 @@ class ListaPisos():
         self.primero: NodoPiso= None
         self.ultimo=None
         self.size = 0
-    
-
 
     def inserta_al_final(self, nombrepiso, R, C, F, S):
         nuevopiso=NodoPiso(nombrepiso, R, C, F, S)
@@ -29,11 +27,10 @@ class ListaPisos():
             aux=aux.getsiguiente()
         return aux
 
-
     def mostrar_pisos(self):
         tmp=self.primero
         for i in range(self.size):
-            print('(',i,')','El nombre del piso es:', tmp.getnombrepiso(),'\n','-cantidad de filas:',tmp.getfila(),'\n','-cantidad de columnas:',tmp.getcolumna(),'\n','-precio por voltear:',tmp.getprecioflip(), '\n','-precio por deslizar:',tmp.getprecioslide())
+            print('El número de piso es:','(',i,')','\n','El nombre del piso es:', tmp.getnombrepiso(),'\n','-cantidad de filas:',tmp.getfila(),'\n','-cantidad de columnas:',tmp.getcolumna(),'\n','-precio por voltear:',tmp.getprecioflip(), '\n','-precio por deslizar:',tmp.getprecioslide())
             tmp.patrones.mostrar_patrones()
             tmp = tmp.getsiguiente()
 
@@ -42,5 +39,4 @@ class ListaPisos():
 # pruebadelistapisos.inserta_al_final("mm2",3,54,4,112)
 # pruebadelistapisos.inserta_al_final("mm05",3,54,4,112)
 # print (pruebadelistapisos, "pruebaaaa")
-
 # pruebadelistapisos.mostrar_pisos()
