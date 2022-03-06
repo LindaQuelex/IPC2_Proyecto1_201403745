@@ -2,17 +2,17 @@ from listapatrones import ListaPatrones
 from listacelda import ListaCelda
 
 class NodoPiso():
-    def __init__(self, nombrepiso, R, C, F, S) :
+    def __init__(self, nombrepiso, R, C, F, S,RC) :
         self.id=0
         self.nombrepiso= nombrepiso
         self.fila= R
         self.columna= C
         self.precioflip= F
         self.precioslide= S
+        self.cantidadceldas=RC
         self.siguiente=None
         self.anterior=None
         self.patrones= ListaPatrones()
-       
     
     def setId(self,id):
         self.id=id
@@ -38,6 +38,12 @@ class NodoPiso():
     def setcolunma(self, columna):
         self.columna =columna
 
+    def getcantidadceldas(self):
+        return self.cantidadceldas
+
+    def setcantidadceldas(self, cantidadceldas):
+        self.cantidadceldas =cantidadceldas
+
     def getprecioflip(self):
         return self.precioflip
 
@@ -50,7 +56,6 @@ class NodoPiso():
     def setprecioslide(self, precioslide):
         self.precioslide =precioslide
 
- 
     def getsiguiente(self):
         return self.siguiente
 
@@ -62,15 +67,12 @@ class NodoPiso():
 
     def setanterior(self,anterior):
         self.anterior = anterior
-   
-   
  
     def getListapatrones(self):
         return self.getListapatrones()
 
     def setlistapatrones(self, nuevalistapatrones):
         self.patrones = nuevalistapatrones
-
 
     def getListaceldas(self):
         return self.getListaceldas()

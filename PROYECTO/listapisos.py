@@ -1,3 +1,4 @@
+from this import d
 from nodopatrones import NodoPatrones
 from nodopiso import NodoPiso
 from listapatrones import ListaPatrones
@@ -8,7 +9,6 @@ class ListaPisos():
         self.ultimo=None
         self.size = 0
 
-     
     def insertar(self, nuevo:NodoPiso):
         self.size +=1
         if self.primero == None:
@@ -37,11 +37,8 @@ class ListaPisos():
                     else:
                         break 
 
-
-
-
-    def inserta_al_final(self, nombrepiso, R, C, F, S):
-        nuevopiso=NodoPiso(nombrepiso, R, C, F, S)
+    def inserta_al_final(self, nombrepiso, R, C, F, S, RC):
+        nuevopiso=NodoPiso(nombrepiso, R, C, F, S, RC)
         nuevopiso.setId(self.size)
         self.size += 1 
         if self.primero is None: 
@@ -62,17 +59,15 @@ class ListaPisos():
     def mostrar_pisos(self):
         tmp=self.primero
         for i in range(self.size):
-            print('El número de piso es:','(',i,')','\n','El nombre del piso es:', tmp.getnombrepiso(),'\n','-cantidad de filas:',tmp.getfila(),'\n','-cantidad de columnas:',tmp.getcolumna(),'\n','-precio por voltear:',tmp.getprecioflip(), '\n','-precio por deslizar:',tmp.getprecioslide())
+            print('El número correlativo del piso es:','(',i,')','\n','El nombre del piso es:', tmp.getnombrepiso(),'\n','-cantidad de filas:',tmp.getfila(),'\n','-cantidad de columnas:',tmp.getcolumna(),'\n','-precio por voltear:',tmp.getprecioflip(), '\n','-precio por deslizar:',tmp.getprecioslide(),'\n',"---->La cantidad de celdas debe ser: ",tmp.getcantidadceldas() )
             tmp.patrones.mostrar_patrones()
             tmp = tmp.getsiguiente()
-
 
     def mostrar(self):
         tmp=self.primero
         while tmp != None:
             print("temporal",tmp.id, tmp.nombrepiso,tmp.fila, tmp.columna, tmp.precioflip, tmp.precioslide)
             tmp=tmp.siguiente
-
 
     def ordenar_pisos_BubbleSortStd(self):
         comprobar = self.primero
@@ -88,9 +83,6 @@ class ListaPisos():
                         j.nombrepiso = temporal
                     j = j.siguiente
                 i = i.siguiente
-                
-
-
 
 # pruebadelistapisos = ListaPisos('nodo')
 # pruebadelistapisos.inserta_al_final("mm2",3,54,4,112)
@@ -98,15 +90,15 @@ class ListaPisos():
 # print (pruebadelistapisos, "pruebaaaa")
 # pruebadelistapisos.mostrar_pisos()
 
-nodos=ListaPisos()
-nodo2= NodoPiso('ejemplo02', None,2,3,4)
-nodo1= NodoPiso('ejemplo99', 1,2,3,4)
-nodo3= NodoPiso('ejemplo12', 1,2,3,4)
-nodo4= NodoPiso('ejemplo04', 1,2,3,4)
+# nodos=ListaPisos()
+# nodo2= NodoPiso('ejemplo02', None,2,3,4,4)
+# nodo1= NodoPiso('ejemplo99', 1,2,3,4)
+# nodo3= NodoPiso('ejemplo12', 1,2,3,4)
+# nodo4= NodoPiso('ejemplo04', 1,2,3,4)
 
-nodos.insertar(nodo3)
-nodos.insertar(nodo4)
-nodos.insertar(nodo2)
-nodos.insertar(nodo1)
+# nodos.insertar(nodo3)
+# nodos.insertar(nodo4)
+# nodos.insertar(nodo2)
+# nodos.insertar(nodo1)
 
-nodos.mostrar()
+# nodos.mostrar()

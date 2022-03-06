@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <pisosArtesanales>
     <piso nombre="ejemplo50">
-        <R> 1 </R>
-        <C> 4 </C>
+        <R> 4 </R>
+        <C> 1 </C>
         <F> 1 </F>
         <S> 1 </S>
         <patrones>

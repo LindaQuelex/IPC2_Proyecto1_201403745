@@ -37,5 +37,3 @@ class NodoPatrones():
 
     def setlistaceldas(self, nuevacelda):
         self.listaceldas = nuevacelda
-        
-

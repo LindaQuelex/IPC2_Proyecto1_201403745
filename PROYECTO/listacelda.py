@@ -23,10 +23,8 @@ class ListaCelda():
            self.ultimo=nuevacelda
         return nuevacelda
     
-
     def grafica_inicial(self):
         temp = self.primero
-       
         graficadefault=" digraph G { \n"
         while temp is not None:
             if temp.colorcelda =="W":
@@ -35,8 +33,6 @@ class ListaCelda():
             else:
                 graficadefault += '{}[label="{}",color = "black",fillcolor="{}", fontcolor="black",style="filled",shape="box"];\n'.format(temp.getidcelda,temp.colorcelda,'black')
                 temp=temp.siguiente
-
-
         temp=self.primero
         while temp is not None:
             if temp.siguiente is None:
@@ -54,9 +50,7 @@ class ListaCelda():
 
     def grafica_seleccionada(self):
         temp = self.primero
-       
         graficadefault=" digraph G { \n"
-        
         while temp is not None:
             if temp.colorcelda =="W":
                 graficadefault += '{}[label="{}",color = "black",fillcolor="white", fontcolor="white",style="filled",shape="box"];\n'.format(temp.getidcelda,temp.colorcelda)
@@ -64,8 +58,6 @@ class ListaCelda():
             else:
                 graficadefault += '{}[label="{}",color = "black",fillcolor="{}", fontcolor="black",style="filled",shape="box"];\n'.format(temp.getidcelda,temp.colorcelda,'black')
                 temp=temp.siguiente
-
-
         temp=self.primero
         while temp is not None:
             if temp.siguiente is None:
@@ -86,25 +78,22 @@ class ListaCelda():
             print("La lista no tiene elementos")
             return
         else:
-            n = self.iniciarnodocelda
-            while n is not None:
-                print("La lista de celdas es:",n.colorcelda , "funciona el método de recorrer lista")    
-                n = n.siguiente
-
+            nuevo = self.iniciarnodocelda
+            while nuevo is not None:
+                print("La lista de celdas es:",nuevo.colorcelda , "funciona el método de recorrer lista")    
+                nuevo = nuevo.siguiente
 
     def mostrar_celda(self):
         tmp=self.primero
         for i in range(self.size):
             print("     ",i,'  El color de piso es:',tmp.getcolorcelda())
-            tmp = tmp.getsiguiente()
-
+            tmp = tmp.getsiguiente() 
 
     def retornar_nodo(self, id):
         aux=self.primero
         while aux.getidcelda()< id:
             aux=aux.getsiguiente()
         return aux
-
 
     def cambiarnodo(self, id, nuevo_Dato):
         if id>=0 and id<self.size:
@@ -116,8 +105,6 @@ class ListaCelda():
         else:
              raise Exception('correlativo no valido.')
 
-
-    
 
 
 

@@ -3,11 +3,9 @@ from nodopatrones import NodoPatrones
 
 class ListaPatrones():
     def __init__(self):
-    
         self.primero: NodoPatrones= None
         self.ultimo=None
         self.size = 0
-
 
     def inserta_al_final_patrones(self, codigopatrones):
         nuevopatron=NodoPatrones(codigopatrones)
@@ -28,8 +26,6 @@ class ListaPatrones():
         while aux.getid()< id:
             aux=aux.getsiguiente()
         return aux
-
-        
 
     def mostrar_patrones(self):
         tmp=self.primero
@@ -52,13 +48,10 @@ class ListaPatrones():
                         j.codigopatrones = temporal
                     j = j.siguiente
                 i = i.siguiente
-
-  
     
     def mov_precio_volter_es_menor(self,listaceldas):
         self.size +=1
         pass
-
 
 # ListaPatrones.inserta_al_final_patrones(12)
 # ListaPatrones.inserta_al_final_patrones(22)
