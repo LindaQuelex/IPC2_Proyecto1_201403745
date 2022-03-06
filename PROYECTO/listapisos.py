@@ -8,6 +8,38 @@ class ListaPisos():
         self.ultimo=None
         self.size = 0
 
+     
+    def insertar(self, nuevo:NodoPiso):
+        self.size +=1
+        if self.primero == None:
+            self.primero = nuevo
+            self.ultimo =nuevo
+        else:
+            if nuevo.id < self.primero.id:
+               nuevo.siguiente=self.primero
+               self.primero.anterior=nuevo
+               self.primero =nuevo
+            elif nuevo.id > self.ultimo.id:
+                self.ultimo.siguiente =nuevo
+                nuevo.anterior =self.ultimo
+                self.ultimo =nuevo
+            else:
+                tmp : NodoPiso =self.primero
+                while tmp != None:
+                    if nuevo.id < tmp.id:
+                        nuevo.siguiente =tmp
+                        nuevo.anterior =tmp.anterior
+                        tmp.anterior.siguiente= nuevo
+                        tmp.anterior=nuevo
+                        break
+                    elif nuevo.id >tmp.id:
+                        tmp = tmp.siguiente
+                    else:
+                        break 
+
+
+
+
     def inserta_al_final(self, nombrepiso, R, C, F, S):
         nuevopiso=NodoPiso(nombrepiso, R, C, F, S)
         nuevopiso.setId(self.size)
@@ -35,6 +67,13 @@ class ListaPisos():
             tmp = tmp.getsiguiente()
 
 
+    def mostrar(self):
+        tmp=self.primero
+        while tmp != None:
+            print("temporal",tmp.id, tmp.nombrepiso,tmp.fila, tmp.columna, tmp.precioflip, tmp.precioslide)
+            tmp=tmp.siguiente
+
+
     def ordenar_pisos_BubbleSortStd(self):
         comprobar = self.primero
         aux = self.primero
@@ -49,10 +88,25 @@ class ListaPisos():
                         j.nombrepiso = temporal
                     j = j.siguiente
                 i = i.siguiente
+                
 
 
-# pruebadelistapisos = ListaPisos()
+
+# pruebadelistapisos = ListaPisos('nodo')
 # pruebadelistapisos.inserta_al_final("mm2",3,54,4,112)
 # pruebadelistapisos.inserta_al_final("mm05",3,54,4,112)
 # print (pruebadelistapisos, "pruebaaaa")
 # pruebadelistapisos.mostrar_pisos()
+
+nodos=ListaPisos()
+nodo2= NodoPiso('ejemplo02', None,2,3,4)
+nodo1= NodoPiso('ejemplo99', 1,2,3,4)
+nodo3= NodoPiso('ejemplo12', 1,2,3,4)
+nodo4= NodoPiso('ejemplo04', 1,2,3,4)
+
+nodos.insertar(nodo3)
+nodos.insertar(nodo4)
+nodos.insertar(nodo2)
+nodos.insertar(nodo1)
+
+nodos.mostrar()

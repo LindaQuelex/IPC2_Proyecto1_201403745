@@ -53,9 +53,15 @@ class ListaPatrones():
                     j = j.siguiente
                 i = i.siguiente
 
-
+  
+    
     def mov_precio_volter_es_menor(self,listaceldas):
         self.size +=1
         pass
 
-    
+
+# ListaPatrones.inserta_al_final_patrones(12)
+# ListaPatrones.inserta_al_final_patrones(22)
+# ListaPatrones.inserta_al_final_patrones(2)
+# #ListaPatrones.ordenar_patrones_BubbleSortStd()
+# ListaPatrones.mostrar_patrones()

@@ -1,10 +1,11 @@
 
 import xml.etree.ElementTree as ET
-from listacelda import ListaCelda
-from listapatrones import ListaPatrones
+# from listacelda import ListaCelda
+# from listapatrones import ListaPatrones
 from listapisos import ListaPisos
 
 Crearlistapisos = ListaPisos()
+
 
 def elementTree(ruta):
     contador=0
@@ -24,7 +25,10 @@ def elementTree(ruta):
                 cost_flip=datospiso.text
             if datospiso.tag =="S":
                 cost_slide=datospiso.text
-                Crearlistapisos.inserta_al_final(nombrepiso,row, colum, cost_flip, cost_slide)
+                Crearlistapisos.inserta_al_final(nombrepiso, row, colum, cost_flip, cost_slide)
+               
+                
+                
             if datospiso.tag=="patrones":
                 contadordos=0
                 for patron in datospiso:
@@ -42,8 +46,9 @@ elementTree('./ARCHIVOS ENTRADA/piso.xml')
 print("******************************")
 print("PISOS ARTESANALES DISPONIBLES")
 print("******************************")
-Crearlistapisos.ordenar_pisos_BubbleSortStd()
+#Crearlistapisos.mostrar_pisos()
 Crearlistapisos.mostrar_pisos()
+ 
 
 
 print("*************************************************************")

@@ -10,6 +10,7 @@ class NodoPiso():
         self.precioflip= F
         self.precioslide= S
         self.siguiente=None
+        self.anterior=None
         self.patrones= ListaPatrones()
        
     
@@ -55,6 +56,13 @@ class NodoPiso():
 
     def setsiguiente(self, nuevopiso):
         self.siguiente = nuevopiso
+
+    def getanterior(self):
+        return self.anterior
+
+    def setanterior(self,anterior):
+        self.anterior = anterior
+   
    
  
     def getListapatrones(self):
