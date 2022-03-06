@@ -1,3 +1,4 @@
+from nodocelda import NodoCelda
 from nodopatrones import NodoPatrones
 
 class ListaPatrones():
@@ -36,4 +37,25 @@ class ListaPatrones():
             print('     El correlativo del patron es: ', i,'\n','     Patron: ',tmp.getcodigopatrones(),' Las celdas del patron son:')
             tmp.listaceldas.mostrar_celda()
             tmp = tmp.getsiguiente()
-        
+    
+    def ordenar_patrones_BubbleSortStd(self):
+        comprobar = self.primero
+        aux = self.primero
+        if comprobar.siguiente != None and aux != None:
+            i = self.primero
+            while i != None:
+                j = i.siguiente
+                while j != None:
+                    if i.codigopatrones > j.codigopatrones:
+                        temporal = i.codigopatrones
+                        i.codigopatrones = j.codigopatrones
+                        j.codigopatrones = temporal
+                    j = j.siguiente
+                i = i.siguiente
+
+
+    def mov_precio_volter_es_menor(self,listaceldas):
+        self.size +=1
+        pass
+
+    

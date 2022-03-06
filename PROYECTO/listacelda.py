@@ -117,6 +117,11 @@ class ListaCelda():
              raise Exception('correlativo no valido.')
 
 
+    
+
+
+
+
 
 
 

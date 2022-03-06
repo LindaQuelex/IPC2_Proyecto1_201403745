@@ -35,6 +35,22 @@ class ListaPisos():
             tmp = tmp.getsiguiente()
 
 
+    def ordenar_pisos_BubbleSortStd(self):
+        comprobar = self.primero
+        aux = self.primero
+        if comprobar.siguiente != None and aux != None:
+            i = self.primero
+            while i != None:
+                j = i.siguiente
+                while j != None:
+                    if i.nombrepiso > j.nombrepiso:
+                        temporal = i.nombrepiso
+                        i.nombrepiso = j.nombrepiso
+                        j.nombrepiso = temporal
+                    j = j.siguiente
+                i = i.siguiente
+
+
 # pruebadelistapisos = ListaPisos()
 # pruebadelistapisos.inserta_al_final("mm2",3,54,4,112)
 # pruebadelistapisos.inserta_al_final("mm05",3,54,4,112)

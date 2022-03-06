@@ -42,6 +42,7 @@ elementTree('./ARCHIVOS ENTRADA/piso.xml')
 print("******************************")
 print("PISOS ARTESANALES DISPONIBLES")
 print("******************************")
+Crearlistapisos.ordenar_pisos_BubbleSortStd()
 Crearlistapisos.mostrar_pisos()
 
 
