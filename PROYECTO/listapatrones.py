@@ -34,7 +34,7 @@ class ListaPatrones():
             tmp.listaceldas.mostrar_celda()
             tmp = tmp.getsiguiente()
     
-    def ordenar_patrones_BubbleSortStd(self):
+    def ordenar_patrones(self):
         comprobar = self.primero
         aux = self.primero
         if comprobar.siguiente != None and aux != None:

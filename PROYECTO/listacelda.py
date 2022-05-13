@@ -106,6 +106,15 @@ class ListaCelda():
              raise Exception('correlativo no valido.')
 
 
+# nodo= ListaCelda()
+# n1=NodoCelda('v')
+# n2=NodoCelda('e')
+# n3=NodoCelda('r')
+
+
+# nodo.inserta_al_final_celda(n1.colorcelda)
+# nodo.inserta_al_final_celda(n2.colorcelda)
+# nodo.mostrar_celda()
 
 
 

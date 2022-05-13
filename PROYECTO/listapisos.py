@@ -69,7 +69,7 @@ class ListaPisos():
             print("temporal",tmp.id, tmp.nombrepiso,tmp.fila, tmp.columna, tmp.precioflip, tmp.precioslide)
             tmp=tmp.siguiente
 
-    def ordenar_pisos_BubbleSortStd(self):
+    def ordenar_pisos(self):
         comprobar = self.primero
         aux = self.primero
         if comprobar.siguiente != None and aux != None:

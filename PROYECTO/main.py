@@ -47,7 +47,9 @@ print('\n')
 print("******************************")
 print("PISOS ARTESANALES DISPONIBLES")
 print("******************************", '\n')
-#Crearlistapisos.mostrar_pisos()
+# Crearlistapisos.mostrar_pisos()
+# Crearlistapisos.ordenar_pisos()
+
 Crearlistapisos.mostrar_pisos()
 
 print('\n')
